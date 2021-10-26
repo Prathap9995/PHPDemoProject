@@ -5,8 +5,8 @@
     <classes>
       <class name="Tryit">
         <methods>
-          <include name="Navigate"/>
           <include name="initialize"/>
+          <include name="SelectOpt"/>
         </methods>
       </class> <!-- Tryit -->
     </classes>

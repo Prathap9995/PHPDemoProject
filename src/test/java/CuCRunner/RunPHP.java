@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "C:\\Users\\Prathap\\eclipse-workspace\\Prathap\\Prathap.java\\CoreJava\\PHPDemp\\src\\test\\java\\CucFeature",
+		features = "C:\\Users\\Prathap\\eclipse-workspace\\Prathap\\Prathap.java\\CoreJava\\PHPDemp\\src\\test\\java\\CucFeature\\Feature.feature",
 		glue = {"StepDefPHP"}
 		
 		

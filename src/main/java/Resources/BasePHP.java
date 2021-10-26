@@ -28,7 +28,7 @@ public class BasePHP {
 		
 		FileInputStream File = new FileInputStream("C:\\Users\\Prathap\\eclipse-workspace\\Prathap\\Prathap.java\\CoreJava\\PHPDemp\\src\\main\\java\\Resources\\Data.properties");
 		pro.load(File);
-	String BrowserName = 	pro.getProperty("Browser");
+	String BrowserName = 	pro.getProperty("Browser");  
 	System.out.println(BrowserName);
 		
 		if(BrowserName.equals("chrome")) {

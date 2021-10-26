@@ -16,12 +16,32 @@ public class HomePage extends BasePHP {
 	
 	
 	@FindBy(id="PHPTRAVELS")
-	WebElement PageTitle;
+	WebElement  PageTitle;
+	
+	@FindBy(xpath="//div[@class='lvl-0 dropdown'][1]")
+	WebElement Mouse;
 	
 	
+	@FindBy(linkText="https://www.phptravels.net/")
+	WebElement Link;
+	
+	@FindBy(xpath= "//nav[@class='clearfix']/div[1]/div[1]")
+	WebElement List;
 	
 	public WebElement Title() {
 		return PageTitle;
+	}
+	
+	public WebElement Mouse() {
+		return Mouse;
+	}
+	
+	public WebElement Link() {
+		return Link;
+	}
+	
+	public WebElement List() {
+		return List;
 	}
 
 }

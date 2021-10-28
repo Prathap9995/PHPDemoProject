@@ -6,6 +6,7 @@
       <class name="Tryit">
         <methods>
           <include name="initialize"/>
+          <include name="CloseAllWindow"/>
           <include name="SelectOpt"/>
         </methods>
       </class> <!-- Tryit -->

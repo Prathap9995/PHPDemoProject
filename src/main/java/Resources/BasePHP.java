@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePHP {
 	
@@ -26,14 +26,15 @@ public class BasePHP {
 		
 		Properties pro = new Properties();
 		
-		FileInputStream File = new FileInputStream("C:\\Users\\Prathap\\eclipse-workspace\\Prathap\\Prathap.java\\CoreJava\\PHPDemp\\src\\main\\java\\Resources\\Data.properties");
+		FileInputStream File = new FileInputStream("C:\\Users\\prathapk\\eclipse-workspace\\PHPDemoProject\\src\\main\\java\\Resources\\Data.properties");
 		pro.load(File);
 	String BrowserName = 	pro.getProperty("Browser");  
 	System.out.println(BrowserName);
 		
 		if(BrowserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prathap\\Downloads\\ChromeDriver94\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\prathapk\\chromedriver.exe");
 			 driver = new ChromeDriver();
+			 driver.get(pro.getProperty("URL"));
 	}
 		else {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prathap\\Downloads\\ChromeDriver94\\chromedriver.exe");

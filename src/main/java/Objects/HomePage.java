@@ -11,6 +11,7 @@ public class HomePage extends BasePHP {
 	
 	
 	public HomePage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -21,8 +22,11 @@ public class HomePage extends BasePHP {
 	@FindBy(xpath="//div[@class='lvl-0 dropdown'][1]")
 	WebElement Mouse;
 	
+	@FindBy(xpath = "//div[@class='lvl-0 dropdown open']/div[1]/a[2]")
+	WebElement newLink;
 	
-	@FindBy(linkText="https://www.phptravels.net/")
+	
+	@FindBy(xpath="//div[@class='col-md-12 form-group']/div[1]/a[@href='//www.phptravels.net']")
 	WebElement Link;
 	
 	@FindBy(xpath= "//nav[@class='clearfix']/div[1]/div[1]")
@@ -42,6 +46,10 @@ public class HomePage extends BasePHP {
 	
 	public WebElement List() {
 		return List;
+	}
+	
+	public WebElement NewLink() {
+		return newLink;
 	}
 
 }

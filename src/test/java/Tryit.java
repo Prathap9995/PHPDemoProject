@@ -17,8 +17,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Objects.HomePage;
-import Resources.BasePHP;
+import com.prathap.phpproject.Objects.HomePage;
+import com.prathap.phpprojectResources.BasePHP;
+
 import io.cucumber.java.After;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,6 +28,7 @@ public class Tryit extends BasePHP {
 
 	public Properties pro;
 	public Actions a;
+	public HomePage pg;
 
 	@BeforeTest
 	public void initialize() throws IOException {
@@ -51,16 +53,31 @@ public class Tryit extends BasePHP {
 		Actions a = new Actions(driver);
 		a.moveToElement(home.Mouse()).build().perform();
 	}
+	
+	@Test
+	public void Dummy() {
+		HomePage pt = new HomePage(driver);
+	System.out.println(pt.Title().getText());
+		
+		
+	}
 //
   @Test
   public void SelectOpt() throws InterruptedException {
-//	 HomePage he = new HomePage(driver);
+	 HomePage he = new HomePage(driver);
 //	 Actions c = new Actions(driver);
 //	 c.moveToElement(he.Mouse()).build().perform();
+	//  WebElement ele = driver.findElement(By.xpath("//nav[@class='clearfix']/div[1]/span[text()='Features']"));
+	try {	
+	 he.Mouse().click();
+	//  Thread.sleep(5000);
 	 driver.findElement(By.xpath("//div[@class='lvl-0 dropdown open']/div[1]/a[2]")).click();
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
-			 
+	}
+	catch(Exception e) {
+		System.out.println("No such Element");
+	}
   }
 	
   //	  }

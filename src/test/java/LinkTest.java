@@ -14,11 +14,11 @@ public class LinkTest {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\prathapk\\chromedriver.exe");
 		WebDriver driver = (WebDriver) new ChromeDriver();
 
-//		driver.get("https://phptravels.com/demo/");
+	driver.get("https://phptravels.com/demo/");
 //	WebElement ms =	driver.findElement(By.xpath("//div[@class='lvl-0 dropdown open']"));
 //Actions c = new Actions(driver);
 //c.moveToElement(ms).build().perform();
-		WebElement ele = driver.findElement(By.xpath("//div[@class='lvl-0 dropdown'][1]"));
+		WebElement ele = driver.findElement(By.xpath("//nav[@class='clearfix']/div[1]/span[text()='Features']"));
 		ele.click();
 //List<WebElement> Els=	driver.findElements(By.xpath("//div[@class='lvl-0 dropdown open']/div[1]"));
 		driver.findElement(By.xpath("//div[@class='lvl-0 dropdown open']/div[1]/a[2]")).click();

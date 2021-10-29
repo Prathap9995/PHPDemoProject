@@ -1,11 +1,11 @@
-package Objects;
+package com.prathap.phpproject.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Resources.BasePHP;
+import com.prathap.phpprojectResources.BasePHP;
 
 public class HomePage extends BasePHP {
 	
@@ -15,11 +15,12 @@ public class HomePage extends BasePHP {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//@FindBy(id="PHPTRAVELS")
 	
 	@FindBy(id="PHPTRAVELS")
 	WebElement  PageTitle;
 	
-	@FindBy(xpath="//div[@class='lvl-0 dropdown'][1]")
+	@FindBy(xpath="//nav[@class='clearfix']/div[1]/span[text()='Features']")
 	WebElement Mouse;
 	
 	@FindBy(xpath = "//div[@class='lvl-0 dropdown open']/div[1]/a[2]")

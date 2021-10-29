@@ -1,4 +1,4 @@
-package Resources;
+package com.prathap.phpprojectResources;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,13 +20,14 @@ public class BasePHP {
 	
 	public WebDriver driver;
 	public Properties pro;
-	
+	public FileInputStream File;
 
 	public WebDriver InitializeWebDriver() throws IOException {
 		
 		Properties pro = new Properties();
+	
 		
-		FileInputStream File = new FileInputStream("C:\\Users\\prathapk\\eclipse-workspace\\PHPDemoProject\\src\\main\\java\\Resources\\Data.properties");
+		FileInputStream File = new FileInputStream("src/main/java/com/prathap/phpprojectResources/Data.properties");
 		pro.load(File);
 	String BrowserName = 	pro.getProperty("Browser");  
 	System.out.println(BrowserName);
@@ -34,7 +35,7 @@ public class BasePHP {
 		if(BrowserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\prathapk\\chromedriver.exe");
 			 driver = new ChromeDriver();
-			 driver.get(pro.getProperty("URL"));
+		//	 driver.get(pro.getProperty("URL"));
 	}
 		else {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prathap\\Downloads\\ChromeDriver94\\chromedriver.exe");

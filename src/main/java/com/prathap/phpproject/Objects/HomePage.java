@@ -33,6 +33,13 @@ public class HomePage extends BasePHP {
 	@FindBy(xpath= "//nav[@class='clearfix']/div[1]/div[1]")
 	WebElement List;
 	
+	@FindBy(xpath="//a[text()='Login']")
+	WebElement Login;
+
+	public WebElement LoginButton() {
+		return Login;
+	}
+	
 	public WebElement Title() {
 		return PageTitle;
 	}

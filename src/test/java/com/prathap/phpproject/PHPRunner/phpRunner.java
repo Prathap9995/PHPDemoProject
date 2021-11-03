@@ -11,7 +11,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features = "src/test/java/com/prathap/phpproject/PHPFeature/phpfeature.feature, LoginFeature.feature",
+		features = "src/test/java/com/prathap/phpproject/PHPFeature/phpfeature.feature",
 		glue = {"com.prathap.phpproject.PHPStepDefination"},
 		plugin = {"pretty", "html:target/report.html"},
 	monochrome = true
